@@ -29,6 +29,8 @@ public class LoginSteps {
     @Then("user should be logged in successfully")
     public void validate_login() {
 
+        System.out.println(driver.getTitle());
+
         Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"));
         driver.quit();
     }
